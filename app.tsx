@@ -2,6 +2,8 @@ import { format } from 'date-fns';
 import { Box, render, Text } from 'ink';
 import React, { useState, useEffect } from 'react';
 import BigText from 'ink-big-text';
+import axios from 'axios';
+import 'dotenv/config';
 
 const App = () => {
   const [time, setTime] = useState<string>(
@@ -16,14 +18,31 @@ const App = () => {
     // always clear timers
     return () => {
       clearInterval(timer);
+      // clearInterval(timer2);
     };
+
+    //   const timer2 = setInterval(() => {
+    //     getStat();
+    //   }, 5000);
+    // }, []);
   }, []);
 
   const getTime = () => {
     setTime(format(new Date(), 'dd-MM-yyyy HH:mm:ss'));
   };
 
-  // !TODO fetch data from API to display inside Text
+  // !TODO fetch data from API (youtube) to display inside Text
+  // const [stat, setStat] = useState();
+  // const getStat = async () => {
+  //   const { data } = await axios.get('api url', {
+  //     params: {
+  //       part: 'statistics',
+  //       id: 'youtubeChannelID',
+  //       key: process.env.KEY,
+  //     },
+  //   });
+
+  //   setStat(data.items[0].statistics);
 
   return (
     <Box
