@@ -1,0 +1,26 @@
+{
+  "name": "react-cli-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "date-fns": "^2.29.1",
+    "ink": "^3.2.0",
+    "ink-big-text": "^1.2.0",
+    "ink-spinner": "^4.0.3",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/ink": "^2.0.3",
+    "@types/ink-big-text": "^1.2.1",
+    "@types/ink-spinner": "^3.0.1",
+    "@types/react": "^18.0.15"
+  }
+}
